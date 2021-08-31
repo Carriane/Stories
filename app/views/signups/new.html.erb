@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Stories</title>
+  </head>
+  <body> 
+
+
+   <div class='contact-main'>
+    <a id="simple-menu" href="#sidr"><%= image_tag("menu-white.svg") %></a>
+    <div id="sidr">
+     <ul>
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/about">About</a></li>
+      <li><a href="/signups/new">Create Account</a></li>
+     </ul>
+    </div>
+
+    <div class='form'>     
+     <h1>Get the Latest Updates</h1>
+     <%= form_for @signup do | f | %>
+     <h4>Your Name</h4>
+     <%= f.text_field :firstname %>
+     <h4>Your Email</h4>
+     <%= f.text_field :email  %>
+     <h4>Welcome!</h4>
+     <%= f.submit "Join Now" %>
+     <% end %> 
+    </div>
+   </div>
+    <div class='home-support'>
+        <div class='container'>
+        <h3>Memories of Nature all in on Place</h3>
+        </div>
+    </div>
+ </body>
+ </html>

@@ -1,0 +1,49 @@
+// Place all the styles related to the Signups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.contact-main {
+    background: url(th.jpg)no-repeat center center;
+    background-size: cover;
+    height: 700px;
+}
+
+
+.contact-thanks {
+    background: url(thanks.jpg)no-repeat center center;
+    background-size: cover;
+    height: 700px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;         
+}
+
+
+.content {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+
+.form {
+    margin-bottom: 55%;
+    font-family: sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 43%;
+    height: 100px;
+    width: 250px;
+    text-align: center;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}

@@ -1,0 +1,34 @@
+ <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Stories</title>
+  </head>
+  <body>
+    <div class='about-home'>
+      <a id="simple-menu" href="#sidr"><%= image_tag("menu-white.svg") %></a>
+
+        <div id="sidr">
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li class="active"><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Create Account', new_signup_path(@signup)  %></li>
+          </ul>
+        </div>
+  
+        <div>
+            <h1>Relive your favorite Adventures</h1>
+            <p>Remember the many moments of Joy, Laughter, Beautiful Landscapes, Places and Shows.</p>
+        </div>   
+    </div>
+
+    <div class='home-support'>
+      <div class='container'>
+        <h2>No More Sorting Through Photos</h2>
+        <p>Stories automatically finds your best photos and creates a new travelogue. This way you can capture and share your special moments in fresh new ways.</p>
+        <a class="btn btn-primary btn-lg" href="/signups/new">Signup</a>
+      </div>
+    </div>
+  </body>
+</html>
