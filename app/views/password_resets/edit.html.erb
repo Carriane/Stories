@@ -1,0 +1,30 @@
+ <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Stories</title>
+  </head>
+  <body> 
+
+
+   <div class='contact-main'>
+    
+
+    <div class='form'>     
+     <h1>Reset Password</h1>
+     <%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |f| %>
+     <h4>Password</h4>
+     <%= f.password_field :password %>
+     <h4>Password Confirmation</h4>
+     <%= f.password_field :password_confirmation %>
+     <%= f.submit "Reset Password" %>
+     <% end %> 
+    </div>
+   </div>
+    <div class='home-support'>
+        <div class='container'>
+        <h3>Memories of Nature all in one Place</h3>
+        </div>
+    </div>
+ </body>
+ </html>

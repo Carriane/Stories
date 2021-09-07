@@ -7,16 +7,7 @@
   </head>
   <body>
     <div class='about-home'>
-      <a id="simple-menu" href="#sidr"><%= image_tag("menu-white.svg") %></a>
-
-        <div id="sidr">
-          <ul>
-            <li><%= link_to 'Home', root_path %></li>
-            <li class="active"><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Create Account', new_signup_path(@signup)  %></li>
-          </ul>
-        </div>
-  
+      
         <div>
             <h1>Relive your favorite Adventures</h1>
             <p>Remember the many moments of Joy, Laughter, Beautiful Landscapes, Places and Shows.</p>
@@ -27,7 +18,7 @@
       <div class='container'>
         <h2>No More Sorting Through Photos</h2>
         <p>Stories automatically finds your best photos and creates a new travelogue. This way you can capture and share your special moments in fresh new ways.</p>
-        <a class="btn btn-primary btn-lg" href="/signups/new">Signup</a>
+        <a class="btn btn-success btn-lg" href="/signup">Signup</a>
       </div>
     </div>
   </body>

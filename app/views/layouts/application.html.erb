@@ -12,14 +12,39 @@
   </head>
 
   <body>
+       <a id="simple-menu" href="#sidr" class="menu"><%= image_tag("menu-white.svg") %></a>
 
-  
+        <div id="sidr">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/about">About</a></li>
+            <li><a href="/signup">Create Account</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="#">Travelogues</a></li>
+            <li><a href="/sign_in">Log In</a></li>
+          </ul>
+        </div>
+       <%= notice %>
+       <%= alert %>
+
    <%= yield %>
-    <div class='footer'>
-      <div class='container'>   
-          <p> Carri's Personal Project </p>
-      </div>
-    </div>
+
+  <div class='footer'>
+   <% if Current.user %>
+    Logged in as: <%= Current.user.email %><br>
+    <%= link_to 'Edit Password', edit_password_path, class: "btn btn-success btn-xs" %>
+   
+    <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-success btn-xs" %>
+    <% else %>
+    <%= link_to 'Sign Up', signup_path, class: "btn btn-success btn-xs" %>
+    or
+    <%= link_to 'Login', sign_in_path, class: "btn btn-success btn-xs" %>
+   <% end %>
+
+   <div class='container'>   
+    <p> Carri's Personal Project </p>   
+   </div>
+   </div>
      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
      <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
      <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
