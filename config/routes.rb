@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post 'messages' => 'messages#create'
   get '/signup', to: 'user#new'
   post '/signup', to: 'user#create'
+  get '/images', to: 'user#show'
+  get '/image', to: 'user#index'
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create', as: 'log_in'
   delete 'logout', to: 'sessions#destroy'
@@ -16,4 +18,5 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+  
 end

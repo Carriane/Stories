@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="container">
+    <h1>Images</h1>
+  </div>
+</div>
+
+
+<div class="messages">
+<%= form_for :image do |f| %>
+<%= f.label "Image" %>
+<%= f.file_field :image %>
+<% end %>
+</div>
+
+
+ <a class="btn btn-success btn-lg" href="/image">Images</a>

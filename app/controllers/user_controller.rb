@@ -14,19 +14,23 @@ class UserController < ApplicationController
         render :new
       end
     end
-
-    def sender
-      @user = User.find(params[:id])
+    
+    def show
+      @user = User.new(show_params)
     end
 
-    def recipient
-      @user = User.find(params[:id])
-    end
+    def index 
+      @users = User.all
+    end 
 
     private
 
     def user_params
         # strong parameters
         params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+
+    def show_params
+      params.permit(:image_id)
     end
 end
