@@ -6,11 +6,12 @@
 
 
 <div class="messages">
-<%= form_for :image do |f| %>
-<%= f.label "Image" %>
-<%= f.file_field :image %>
-<% end %>
+ <div class="img2">
+  <%= form_for :image do |f| %>
+  <%= f.label "Image" %>
+  <%= f.file_field :image %>
+  <% end %>
+ </div>
 </div>
-
 
  <a class="btn btn-success btn-lg" href="/image">Images</a>

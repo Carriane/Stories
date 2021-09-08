@@ -3,3 +3,12 @@
     <h1>Images</h1>
   </div>
 </div>
+
+ <div class="container">
+  	<% @users.each do |i| %> 
+  			<p><%= i.image %></p> 
+		<% end %>
+    <div class='messages'>
+    <a  href="/images">New Image</a>
+    </div>
+  </div>
