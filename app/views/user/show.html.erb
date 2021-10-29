@@ -8,8 +8,12 @@
 <div class="messages">
  <div class="img2">
   <%= form_for :image do |f| %>
+   <div class="actions"> 
   <%= f.label "Image" %>
   <%= f.file_field :image %>
+ 
+    <%= f.submit "Upload" %> 
+  </div> 
   <% end %>
  </div>
 </div>

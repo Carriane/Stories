@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'messages' => 'messages#create'
   get '/signup', to: 'user#new'
   post '/signup', to: 'user#create'
-  get '/images', to: 'user#show'
+  post '/images', to: 'user#show'
   get '/image', to: 'user#index'
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create', as: 'log_in'

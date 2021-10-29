@@ -27,10 +27,10 @@ class UserController < ApplicationController
 
     def user_params
         # strong parameters
-        params.require(:user).permit(:email, :password, :password_confirmation)
+        params.require(:user).permit(:email, :password, :password_confirmation, :image)
     end
 
     def show_params
-      params.permit(:image_id)
+      params.permit(:image)
     end
 end

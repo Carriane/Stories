@@ -5,9 +5,10 @@
 </div>
 
  <div class="container">
-  	<% @users.each do |i| %> 
-  			<p><%= i.image %></p> 
-		<% end %>
+    <% @users.each do |i| %>
+      <%= image_tag i.image.to_s, class: 'img-fluid' %>
+    <% end %>
+    
     <div class='messages'>
     <a  href="/images">New Image</a>
     </div>
