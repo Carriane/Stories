@@ -17,6 +17,10 @@ class UserController < ApplicationController
     
     def show
       @user = User.new(show_params)
+      if @user.save 
+        redirect_to '/images'
+      else render 'show'
+      end
     end
 
     def index 
@@ -27,10 +31,10 @@ class UserController < ApplicationController
 
     def user_params
         # strong parameters
-        params.require(:user).permit(:email, :password, :password_confirmation, :image)
+        params.require(:user).permit(:email, :password, :password_confirmation)
     end
 
     def show_params
-      params.permit(:image)
+      params.require(:image)
     end
 end

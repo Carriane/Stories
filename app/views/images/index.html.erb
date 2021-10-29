@@ -5,11 +5,10 @@
 </div>
 
  <div class="container">
-    <% @users.each do |i| %>
-      <%= image_tag i.image.to_s, class: 'img-fluid' %>
+    <% @images.each do |i| %>
+      <%= image_tag i.image.to_s %>
     <% end %>
-    
     <div class='messages'>
-    <a  href="/images">New Image</a>
+    <%= link_to 'New Image', "images/new" %> 
     </div>
   </div>

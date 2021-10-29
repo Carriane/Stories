@@ -8,14 +8,15 @@
 <div class="messages">
  <div class="img2">
   <%= form_for :image do |f| %>
-   <div class="actions"> 
   <%= f.label "Image" %>
-  <%= f.file_field :image %>
- 
-    <%= f.submit "Upload" %> 
-  </div> 
+  <%= f.file_field :image %><br>
+  <div class='actions'>
+  <%= f.submit "Upload" %> 
+  </div>
   <% end %>
  </div>
 </div>
-
- <a class="btn btn-success btn-lg" href="/image">Images</a>
+<%# 
+ <div class='messages'>
+    <%= link_to 'Images', "/images" %> 
+ <%# </div> %>
