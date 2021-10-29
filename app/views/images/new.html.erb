@@ -7,7 +7,7 @@
 
 <div class="messages">
  <div class="img2">
-  <%= form_for :image do |f| %>
+  <%= form_for (@image) do |f| %>
   <%= f.label "Image" %>
   <%= f.file_field :image %><br>
   <div class='actions'>
@@ -16,7 +16,3 @@
   <% end %>
  </div>
 </div>
-<%# 
- <div class='messages'>
-    <%= link_to 'Images', "/images" %> 
- <%# </div> %>
