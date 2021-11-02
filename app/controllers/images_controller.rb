@@ -12,13 +12,13 @@ class ImagesController < ApplicationController
         if @image.save
             redirect_to 'images'
         else
-            render 'new'
+            redirect_to 'images/new'
         end
     end 
 
     private
 
     def image_params
-        params.permit(:image)
+        params.require(:image).permit!
     end 
 end
