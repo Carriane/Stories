@@ -8,17 +8,16 @@ class ImagesController < ApplicationController
     end 
 
     def create
-        @image = Image.new(image_params)
-        if @image.save
-            redirect_to 'images'
-        else
-            redirect_to 'images/new'
+        if 
+         @image = Image.new(image_params) and 
+         @image.save 
+         redirect_to '/images'
         end
     end 
 
     private
 
     def image_params
-        params.require(:image).permit!
+        params.require(:image).permit(:picture)
     end 
 end

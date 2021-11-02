@@ -5,14 +5,14 @@
 </div>
 
 
-<div class="messages">
+<div class="images">
  <div class="img2">
   <%= form_for (@image) do |f| %>
   <%= f.label "Image" %>
   <%= f.file_field :image %><br>
-  <div class='actions'>
-  <%= f.submit "Upload" %> 
-  </div>
-  <% end %>
  </div>
+ <div class='actions'>
+  <%= f.submit "Upload" %> 
+ </div>
+  <% end %>
 </div>
